@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل - مسابقة الشطرنج المدرسية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #1a2530;
+            --accent-color: #d4ac0d;
+            --light-accent: #f1c40f;
+            --text-color: #333;
+            --light-color: #ecf0f1;
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #1a2530;
+            --accent-color: #d4ac0d;
+            --light-accent: #f1c40f;
+            --text-color: #333;
+            --light-color: #ecf0f1;
+            --success-color: #27ae60;
+            --error-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e8edf0);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+            opacity: 0.5;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            flex-direction: column;
+        }
+        
+        .school-logo {
+            height: 250px;
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2.8rem;
+            transform: rotate(10deg);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .school-name {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            color: var(--light-accent);
+            text-align: center;
+        }
+        
+        .intro-section {
+            background-color: white;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            border-right: 5px solid var(--accent-color);
+            position: relative;
+        }
+        
+        .intro-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .intro-section p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        /* ... (بقية الأنماط تبقى كما هي) ... */
+        
+        .creator-credit {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e8edf0);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+            opacity: 0.5;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.8rem;
+            transform: rotate(10deg);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        main {
+            padding: 50px 0;
+        }
+        
+        .chess-form {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            border-top: 5px solid var(--accent-color);
+        }
+        
+        .form-decoration {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 12rem;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            position: relative;
+        }
+        
+        .form-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        
+        .form-description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 172, 13, 0.2);
+            background-color: white;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to left, var(--accent-color), var(--light-accent));
+            color: var(--primary-color);
+            border: none;
+            padding: 14px 25px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(212, 172, 13, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 172, 13, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(212, 172, 13, 0.4);
+        }
+        
+        .clear-btn {
+            background-color: #e0e0e0;
+            color: #555;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .clear-btn:hover {
+            background-color: #d0d0d0;
+        }
+        
+        .confirmation-message {
+            display: none;
+            background-color: var(--success-color);
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .admin-section {
+            display: none;
+            margin-top: 50px;
+        }
+        
+        .data-table {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .table-decoration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        th:first-child {
+            border-radius: 0 6px 0 0;
+        }
+        
+        th:last-child {
+            border-radius: 6px 0 0 0;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .export-btn {
+            background: linear-gradient(to left, var(--primary-color), #34495e);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
+        }
+        
+        .export-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .clear-data-btn {
+            background: linear-gradient(to left, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .clear-data-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .auth-form {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 50px auto;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .auth-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .auth-error {
+            color: var(--error-color);
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
+            background-size: 10px 10px;
+            opacity: 0.2;
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Animation des pièces d'échecs */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .animated-piece {
+            animation: float 6s ease-in-out infinite;
+            display: inline-block;
+        }
+        
+        /* Indicateur de chargement */
+        .loader {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Notification flottante */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .notification.show {
+            animation: notificationIn 0.5s forwards, notificationOut 0.5s forwards 3s;
+        }
+        
+        @keyframes notificationIn {
+            from { top: -50px; opacity: 0; }
+            to { top: 20px; opacity: 1; }
+        }
+        
+        @keyframes notificationOut {
+            from { top: 20px; opacity: 1; }
+            to { top: -50px; opacity: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            .buttons, 
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .chess-form,
+            .data-table,
+            .auth-form {
+                padding: 20px;
+            }
+            
+            .form-decoration {
+                font-size: 8rem;
+                opacity: 0.02;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="notification" class="notification"></div>
+    
+    <header>
+        <div class="header-pattern"></div>
+        <div class="container header-content">
+            <!-- شعار المؤسسة -->
+            <img src="img/1.png" alt="شعار ثانوية محمد الخامس التأهيلية" class="school-logo">
+            
+            <div class="logo">
+                <div class="logo-icon animated-piece">♟️</div>
+                <h1>مسابقة الشطرنج المدرسية<br>
+                    <span class="school-name">ثانوية محمد الخامس التأهيلية - كلميم</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro-section">
+            <h2>بطولة الشطرنج التربوية</h2>
+            <p>
+                تُعتبر مسابقة الشطرنج المدرسية فرصةً ثمينةً لتنمية المهارات الذهنية والإستراتيجية لدى طلابنا الأعزاء. هذه البطولة تهدف إلى تعزيز القيم التربوية مثل الصبر، التركيز، التفكير النقدي، وحسن التخطيط. 
+                <br><br>
+                من خلال هذه المسابقة، نسعى إلى اكتشاف المواهب الطلابية في هذه اللعبة الذهنية العريقة، وتوفير بيئة تنافسية صحية تعزز روح العمل الجماعي والروح الرياضية. 
+                <br><br>
+                نرحب بجميع الطلاب الراغبين في خوض هذه التجربة الفريدة، والتي ستكون بمثابة منصة لإظهار إبداعاتهم وقدراتهم الذهنية.
+            </p>
+        </section>
+        <section class="chess-form">
+            <div class="form-decoration">♚</div>
+            <h2 class="form-title">التسجيل في البطولة</h2>
+            <p class="form-description">املأ النموذج أدناه للمشاركة في مسابقة الشطرنج المدرسية</p>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="playerName">اسم الطالب</label>
+                    <input type="text" id="playerName" placeholder="أدخل الاسم الكامل" required>
+                </div>
+                <div class="form-group">
+                    <label for="sectionName">القسم</label>
+                    <input type="text" id="sectionName" placeholder="أدخل اسم القسم" required>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" class="submit-btn">تسجيل</button>
+                    <button type="button" class="clear-btn" id="clearForm">مسح</button>
+                </div>
+            </form>
+            
+            <div id="confirmationMessage" class="confirmation-message"></div>
+            <div id="loader" class="loader"></div>
+        </section>
+        
+        <!-- Section d'authentification pour l'administration -->
+        <section class="auth-form" id="authSection">
+            <h2 class="auth-title">الدخول إلى لوحة الإدارة</h2>
+            <div class="form-group">
+                <label for="adminCode">كود التحقق</label>
+                <input type="password" id="adminCode" placeholder="أدخل كود التحقق" required>
+            </div>
+            <button id="loginBtn" class="submit-btn" style="width: 100%;">دخول</button>
+            <div id="authError" class="auth-error">كود التحقق غير صحيح</div>
+        </section>
+        
+        <!-- Section admin (cachée par défaut) -->
+        <section class="admin-section" id="adminSection">
+            <div class="data-table">
+                <div class="table-decoration">♞</div>
+                <h2 class="form-title">قائمة المشاركين</h2>
+                
+                <table id="participantsTable">
+                    <thead>
+                        <tr>
+                            <th>رقم</th>
+                            <th>اسم الطالب</th>
+                            <th>القسم</th>
+                            <th>تاريخ التسجيل</th>
+                        </tr>
+                    </thead>
+                    <tbody id="participantsList">
+                        <!-- البيانات ستضاف هنا بواسطة جافاسكريبت -->
+                    </tbody>
+                </table>
+                
+                <div class="action-buttons">
+                    <button id="exportData" class="export-btn">
+                        <span>تصدير البيانات (CSV)</span>
+                        <span>📊</span>
+                    </button>
+                    <button id="exportWord" class="export-btn">
+                        <span>تصدير إلى Word</span>
+                        <span>📝</span>
+                    </button>
+                    <button id="clearData" class="clear-data-btn">
+                        <span>مسح جميع البيانات</span>
+                        <span>🗑️</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="container footer-content">
+            <p>مسابقة الشطرنج المدرسية - ثانوية محمد الخامس التأهيلية - جميع الحقوق محفوظة</p>
+            <p class="creator-credit">إنشاء وتصميم: أيوب علال</p>
+            <div style="margin-top: 10px;">
+                <span class="animated-piece" style="animation-delay: 0s;">♚</span>
+                <span class="animated-piece" style="animation-delay: 1s;">♛</span>
+                <span class="animated-piece" style="animation-delay: 2s;">♝</span>
+                <span class="animated-piece" style="animation-delay: 3s;">♞</span>
+                <span class="animated-piece" style="animation-delay: 4s;">♜</span>
+                <span class="animated-piece" style="animation-delay: 5s;">♟</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // مصفوفة لتخزين المشاركين
+        let participants = [];
+        // كود التحقق (يمكن تغييره)
+        const ADMIN_CODE = "1234";
+        
+        // مؤشر الإعلام
+        const notification = document.getElementById('notification');
+        
+        // إظهار إشعار متحرك
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3500);
+        }
+        
+        // تحويل التاريخ إلى صيغة غريغورية
+        function formatGregorianDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('fr-FR'); // استخدام التنسيق الغريغوري
+        }
+        
+        // تحميل البيانات المحفوظة إذا كانت موجودة
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedData = localStorage.getItem('chessParticipants');
+            if (savedData) {
+                try {
+                    participants = JSON.parse(savedData);
+                } catch (error) {
+                    console.error('خطأ في تحميل البيانات:', error);
+                }
+            }
+        });
+        
+            // معالجة نموذج التسجيل
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const playerName = document.getElementById('playerName').value.trim();
+        const sectionName = document.getElementById('sectionName').value.trim();
+        
+        if (playerName && sectionName) {
+            // إظهار مؤشر التحميل
+            document.getElementById('loader').style.display = 'block';
+            
+            // محاكاة تأخير الشبكة (لإظهار مؤشر التحميل)
+            setTimeout(() => {
+                // إضافة المشارك إلى القائمة
+                const newParticipant = {
+                    id: participants.length + 1,
+                    name: playerName,
+                    section: sectionName,
+                    registrationDate: new Date().toISOString()
+                };
+                
+                participants.push(newParticipant);
+                
+                // حفظ في التخزين المحلي
+                localStorage.setItem('chessParticipants', JSON.stringify(participants));
+                
+                // تحديث العرض - CETTE LIGNE A ÉTÉ AJOUTÉE
+                if (document.getElementById('adminSection').style.display === 'block') {
+                    updateParticipantsTable();
+                }
+                
+                // إخفاء مؤشر التحميل
+                document.getElementById('loader').style.display = 'none';
+                
+                // إظهار رسالة التأكيد
+                const confirmationMessage = document.getElementById('confirmationMessage');
+                confirmationMessage.textContent = `تم التسجيل بنجاح! تمت إضافة ${playerName} إلى قائمة المشاركين.`;
+                confirmationMessage.style.display = 'block';
+                
+                // إعادة تعيين النموذج
+                document.getElementById('registrationForm').reset();
+                
+                // إخفاء رسالة التأكيد بعد بضع ثوان
+                setTimeout(() => {
+                    confirmationMessage.style.display = 'none';
+                }, 5000);
+                
+                // إظهار إشعار
+                showNotification('تم تسجيل مشارك جديد!');
+                
+            }, 800); // تأخير مصطنع
+        }
+    });
+                    
+                  
+        
+        // مسح النموذج
+        document.getElementById('clearForm').addEventListener('click', function() {
+            document.getElementById('registrationForm').reset();
+        });
+        
+        // تحديث جدول المشاركين
+        function updateParticipantsTable() {
+            const tableBody = document.getElementById('participantsList');
+            tableBody.innerHTML = '';
+            
+            if (participants.length === 0) {
+                const emptyRow = document.createElement('tr');
+                emptyRow.innerHTML = '<td colspan="4" style="text-align: center;">لا يوجد مشاركين مسجلين حتى الآن</td>';
+                tableBody.appendChild(emptyRow);
+                return;
+            }
+            
+            participants.forEach((participant) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${participant.id}</td>
+                    <td>${participant.name}</td>
+                    <td>${participant.section}</td>
+                    <td>${formatGregorianDate(participant.registrationDate)}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // تصدير البيانات بتنسيق CSV
+        document.getElementById('exportData').addEventListener('click', function() {
+            if (participants.length === 0) {
+                showNotification('لا توجد بيانات للتصدير');
+                return;
+            }
+            
+            const headers = ['رقم', 'اسم الطالب', 'القسم', 'تاريخ التسجيل'];
+            
+            // إنشاء محتوى CSV
+            let csvContent = '\uFEFF' + headers.join(',') + '\n'; // BOM لدعم الأحرف العربية
+            
+            participants.forEach(participant => {
+                const dateStr = participant.registrationDate ? 
+                    formatGregorianDate(participant.registrationDate) : '';
+                    
+                const row = [
+                    participant.id,
+                    '"' + participant.name.replace(/"/g, '""') + '"', // تهرب من علامات الاقتباس
+                    '"' + participant.section.replace(/"/g, '""') + '"',
+                    '"' + dateStr + '"'
+                ];
+                csvContent += row.join(',') + '\n';
+            });
+            
+            // إنشاء رابط لتنزيل ملف CSV
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'المشاركين_في_الشطرنج.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showNotification('تم تصدير البيانات بنجاح');
+        });
+
+        // تصدير البيانات إلى مستند Word
+        document.getElementById('exportWord').addEventListener('click', function() {
+            if (participants.length === 0) {
+                showNotification('لا توجد بيانات للتصدير');
+                return;
+            }
+
+            // إنشاء محتوى HTML للجدول
+            let htmlContent = `
+                <html xmlns:o='urn:schemas-microsoft-com:office:office' 
+                      xmlns:w='urn:schemas-microsoft-com:office:word' 
+                      xmlns='http://www.w3.org/TR/REC-html40'>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>قائمة المشاركين في مسابقة الشطرنج</title>
+                    <style>
+                        body {
+                            font-family: 'Tajawal', sans-serif;
+                            direction: rtl;
+                        }
+                        table {
+                            border-collapse: collapse;
+                            width: 100%;
+                            margin: 20px 0;
+                        }
+                        th, td {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            text-align: right;
+                        }
+                        th {
+                            background-color: #2c3e50;
+                            color: white;
+                        }
+                        h1 {
+                            color: #2c3e50;
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>قائمة المشاركين في مسابقة الشطرنج المدرسية</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>رقم</th>
+                                <th>اسم الطالب</th>
+                                <th>القسم</th>
+                                <th>تاريخ التسجيل</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            // إضافة بيانات المشاركين
+            participants.forEach(participant => {
+                const dateStr = participant.registrationDate ? 
+                    formatGregorianDate(participant.registrationDate) : '';
+                
+                htmlContent += `
+                    <tr>
+                        <td>${participant.id}</td>
+                        <td>${participant.name}</td>
+                        <td>${participant.section}</td>
+                        <td>${dateStr}</td>
+                    </tr>
+                `;
+            });
+
+            htmlContent += `
+                        </tbody>
+                    </table>
+                </body>
+                </html>
+            `;
+
+            // إنشاء ملف Word
+            const blob = new Blob(['\ufeff', htmlContent], {
+                type: 'application/msword'
+            });
+            
+            // إنشاء رابط للتنزيل
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'قائمة_المشاركين_في_الشطرنج.doc';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showNotification('تم تصدير البيانات إلى ملف Word بنجاح');
+        });
+        
+        // Effacer toutes les données
+        document.getElementById('clearData').addEventListener('click', function() {
+            if (participants.length === 0) {
+                showNotification('لا توجد بيانات لمسحها');
+                return;
+            }
+            
+            if (confirm('هل أنت متأكد أنك تريد حذف جميع البيانات؟ لا يمكن التراجع عن هذا الإجراء.')) {
+                participants = [];
+                localStorage.removeItem('chessParticipants');
+                updateParticipantsTable();
+                showNotification('تم حذف جميع البيانات بنجاح');
+            }
+        });
+        
+        // Gestion de l'authentification
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const enteredCode = document.getElementById('adminCode').value.trim();
+            const authError = document.getElementById('authError');
+            
+            if (enteredCode === ADMIN_CODE) {
+                // Masquer le formulaire d'authentification
+                document.getElementById('authSection').style.display = 'none';
+                
+                // Afficher la section admin
+                document.getElementById('adminSection').style.display = 'block';
+                
+                // Mettre à jour le tableau
+                updateParticipantsTable();
+                
+                showNotification('تم الدخول إلى لوحة الإدارة بنجاح');
+            } else {
+                authError.style.display = 'block';
+                setTimeout(() => {
+                    authError.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
